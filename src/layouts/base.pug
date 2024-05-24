@@ -1,0 +1,15 @@
+include ../utils/pug/mixins/index-mixin.pug
+
+doctype html
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		+stlinc(["fonts", "null", "styles"])
+		block titleName
+			title Default name
+			
+	body 
+		.wrapper
+			block content
+				h1 No content
