@@ -5,14 +5,14 @@
 	"main": "index.js",
 	"scripts": {
 		"clear": "rm -R -f ./dist ./.parcel-cache",
-		"dev": "npm run clear && parcel --no-source-maps --no-cache ./index.pug && parcel watch ./*",
+		"dev": "npm run clear && parcel --no-source-maps --no-cache ./src/pages/index.pug && parcel watch ./*",
 		"build": "parcel build ./index.pug"
 	},
 	"author": "Crash",
 	"license": "ISC",
 	"devDependencies": {
 		"@parcel/transformer-pug": "^2.12.0",
-		"parcel": "^2.12.0",
-		"postcss-nested": "^6.0.1"
+		"@parcel/transformer-sass": "^2.12.0",
+		"parcel": "^2.12.0"
 	}
 }
