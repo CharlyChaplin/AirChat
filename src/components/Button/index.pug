@@ -1,0 +1,6 @@
+mixin buttonAuth(type = "submit", mode = "signin", text = "")
+
+	append block head
+	link(rel="stylesheet" href="../components/Button/style.sass")
+	
+	button.button__auth(type=type) #{text}

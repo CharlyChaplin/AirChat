@@ -1,0 +1,41 @@
+@import "../../styles/sass-mixins"
+@import "../../styles/vars"
+
+.input
+	min-width: rem(420)
+	&__label
+		display: flex
+		flex-direction: column
+	&__inputDesc
+		font-family: "InterRegular", sans-serif
+		font-size: rem(18)
+		margin-bottom: rem(5)
+		margin-left: $marginLeftInputDescription
+	&__textdata
+		font-family: "InterLight", sans-serif
+		border: rem(1) solid #0000FF
+		border-radius: rem(7)
+		padding: rem(10)
+		margin-bottom: rem(2)
+		&:focus
+			border: rem(1) solid #5A5
+		&::placeholder
+			font-size: rem(16)
+			color: $placeholder_color
+	&__footer
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+	&__errDesc
+		color: #F00
+		font-family: "InterRegular", sans-serif
+		font-size: rem(13)
+		margin-left: $marginLeftInputDescription
+	// &__forgotten
+	// 	color: #0000FF
+	// 	font-family: "InterRegular", sans-serif
+	// 	font-size: rem(16)
+	// 	&:hover
+	// 		text-decoration: underline
+	// &__welcome
+	// 	@extend .input__forgotten

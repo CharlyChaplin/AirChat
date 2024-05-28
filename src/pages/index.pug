@@ -1,7 +1,13 @@
 extends ../layouts/base.pug
 
-block titleName
-	title Вход
+
+block variables 
+	- const title = "Вход";
 	
+block head
+	link(rel="stylesheet", href="../components/SignIn/style.sass")
+
 block content 
-	.page test content
+	main.page 
+		.page__form.form
+			include ../components/SignIn/index.pug

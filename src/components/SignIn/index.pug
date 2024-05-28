@@ -1,0 +1,18 @@
+include ../Input/index.pug
+include ../Button/index.pug
+include ../ExtraLink/index.pug
+
+.form__wrapper 
+	form.form__content
+		.form__header
+			.form__caption
+				+titleData("Привет!", "Рады видеть тебя здесь!")
+		.form__body 
+			+inputType("text", "login", "Введите ваш e-mail...", "Электронная почта:")
+			+inputType("password", "password", "Введите ваш пароль...", "Пароль:")
+		.form__footer
+			.form__button 
+				+buttonAuth("submit", "signin", "Войти")
+			.form__signInOutLink
+				span Новичок?
+				+extraLink("#", "link__welcome", "Добро пожаловать!")
