@@ -1,6 +1,6 @@
 include ../ExtraLink/index.pug
 
-mixin inputType(type, id, placeholder="", descText="", errText="")
+mixin inputType(type, id, placeholder="", descText="", errText="", forgotFactor=true)
 
 	append block head
 		link(rel="stylesheet", href="../components/Input/style.sass")
@@ -12,6 +12,6 @@ mixin inputType(type, id, placeholder="", descText="", errText="")
 			input.input__textdata(type=type id=id placeholder=placeholder required)
 			.input__footer
 				span.input__errDesc #{errText}
-				if type === 'password'
+				if type === 'password' && forgotFactor
 					+extraLink("#", "link__forgotten", "Забыли пароль?")
 			

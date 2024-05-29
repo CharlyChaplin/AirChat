@@ -1,0 +1,23 @@
+include ../Input/index.pug
+include ../Button/index.pug
+include ../ExtraLink/index.pug
+
+.form__wrapper 
+	form.form__content
+		.form__header
+			.form__caption
+				+titleData("Давай к нам!", "Будем рады видеть тебя здесь!")
+		.form__body 
+			+inputType("text", "login", "Введите ваш e-mail...", "Электронная почта:")
+			+inputType("text", "nickname", "Ваш ник в чате...", "Никнейм в чате:")
+			+inputType("text", "realname", "Ваше настоящее имя...", "Имя:")
+			+inputType("text", "realsurname", "Ваша настоящая фамилия...", "Фамилия:")
+			+inputType("text", "phone", "Номер вашего телефона...", "Телефон:")
+			+inputType("password", "password", "Введите ваш пароль...", "Пароль:", "", false)
+			+inputType("password", "renewpassword", "Введите ваш пароль ещё раз...", "Повторите ввод пароля:", "", false)
+		.form__footer
+			.form__button 
+				+buttonAuth("submit", "signup", "Готово")
+			.form__signInOutLink
+				span Уже зарегистрированы?
+				+extraLink("./index.pug", "link__welcome", "Войти")

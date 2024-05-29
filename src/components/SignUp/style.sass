@@ -1,0 +1,42 @@
+@import "../../styles/sass-mixins"
+
+.form
+	&__wrapper
+		// 
+	&__content
+		padding: rem(40) rem(50)
+		border: rem(1) solid #0000FF
+		border-radius: rem(27)
+	&__header
+		// 
+	&__caption
+		font-family: "InterRegular", sans-serif
+		margin-bottom: rem(100)
+		&-text
+			color: rgb(0, 0, 255, .75)
+			font-size: rem(40)
+			margin-bottom: rem(11)
+		&-desc-text
+			color: #000
+			font-size: rem(20)
+	&__body
+		display: flex
+		flex-direction: column
+		gap: rem(20)
+		margin-bottom: rem(50)
+	&__footer
+		font-family: "InterRegular", sans-serif
+		font-size: rem(16)
+		color: #000
+	&__button
+		margin-bottom: rem(10)
+		width: 100%
+		display: flex
+		flex-direction: row
+		justify-content: center
+	&__signInOutLink
+		display: flex
+		flex-direction: row
+		align-items: center
+		justify-content: center
+		gap: rem(5)
