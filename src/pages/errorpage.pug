@@ -1,0 +1,10 @@
+extends ../layouts/error.pug
+include ../components/ErrorPage/index.pug
+
+block variables 
+	- const title = "Страница не найдена";
+
+
+block content 
+	main.page
+		+errPage(404, "Не туда попали")

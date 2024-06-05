@@ -2,4 +2,7 @@ mixin extraLink(link="#", cls="", text)
 	append block head
 		link(rel="stylesheet", href="../components/ExtraLink/style.sass")
 
-	a(href=link class=cls) #{text}
+	if (cls) 
+		a(href=link class=cls) #{text}
+	else
+		a(href=link) #{text}

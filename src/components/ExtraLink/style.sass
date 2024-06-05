@@ -1,8 +1,28 @@
+@import ../../styles/vars
+
 .link
+	color: $linkColor
+	font-family: "InterRegular", sans-serif
+	position: relative
+	&::after
+		content: ''
+		position: absolute
+		left: 50%
+		bottom: rem(-4)
+		width: 0
+		opacity: 0
+		height: rem(1)
+		background-color: $linkColor
+		transition: all 0.35s ease 0s
+	&:hover
+		&::after
+			content: ''
+			opacity: 1
+			width: 100%
+			left: 0
 	&__forgotten
-		color: #0000FF
-		font-family: "InterRegular", sans-serif
-		&:hover
-			text-decoration: underline
+		@extend .link
 	&__welcome
-		@extend .link__forgotten
+		@extend .link
+	&__back
+		@extend .link

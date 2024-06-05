@@ -1,8 +1,7 @@
 include ../utils/pug/mixins/index-mixin.pug
 
 block variables
-	- let title = "Default Page"
-	//- - let styles = []
+	- let title = title
 
 doctype html
 html(lang="ru")
@@ -12,10 +11,12 @@ html(lang="ru")
 		
 		block head
 		+stlinc(['fonts', 'null', 'styles', 'sass-mixins'])
-		//- +stlinc(styles)
 		title #{title}
 
 	body 
 		.wrapper
 			block content
 				h1 No content
+		
+		script
+			include ../utils/functions.js

@@ -1,0 +1,14 @@
+include ../ExtraLink/index.pug
+
+mixin errPage(errCode, errStatus)
+	
+
+	append block head
+		link(rel="stylesheet", href="../components/ErrorPage/style.sass")
+		
+	.page__error
+		.page__errorwrapper
+			.page__errorcode
+				span #{errCode}
+			.page__errordesc #{errStatus}
+			+extraLink("./index.pug", "link__back", "вернуться")

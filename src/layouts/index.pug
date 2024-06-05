@@ -1,0 +1,24 @@
+include ../utils/pug/mixins/index-mixin.pug
+
+block variables
+	- let title = "Default Page"
+	//- - let styles = []
+
+doctype html
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		
+		block head
+		+stlinc(['fonts', 'null', 'styles', 'sass-mixins'])
+		//- +stlinc(styles)
+		title #{title}
+
+	body 
+		.wrapper
+			block content
+				h1 No content
+		
+		script
+			include ../utils/functions.js
