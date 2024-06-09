@@ -16,4 +16,6 @@ include ../ExtraLink/index.pug
 			.form__signInOutLink
 				span Новичок?
 				+extraLink("./signup.pug", "link__welcome", "Добро пожаловать!")
-				+extraLink("./errorpage.pug", "link__error", "Ошибка")
+			div(style="display: flex; flex-direction: column; width: fit-content; gap: 15px; margin-top: 10px")
+				+extraLink("./errorpage.pug", "link__error", "Страница ошибки")
+				+extraLink("./chat.pug", "link__error", "Страница чатов")
