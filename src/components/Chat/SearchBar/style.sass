@@ -1,0 +1,38 @@
+@import "../../../styles/sass-mixins"
+@import "../../../styles/vars"
+
+.aside
+	&__searchBar
+		display: flex
+		flex-direction: row
+		width: 100%
+		border-radius: rem(10)
+		overflow: hidden
+		background-color: rgba($black, .1)
+.searchBar
+	&__form
+		display: flex
+		flex-direction: row
+		align-items: center
+		justify-content: center
+		width: 100%
+		padding: rem(11)
+		gap: rem(10)
+	&__icon
+		width: rem(20)
+		height: rem(20)
+		svg
+			width: 100%
+			height: 100%
+			fill: rgba($black, .4)
+	&__input
+		font-family: "InterRegular", sans-serif
+		font-size: rem(18)
+		background-color: transparent
+		width: rem(70)
+		transition: all 0.25s ease-in-out 0s
+		&::placeholder
+			color: rgba($black, .5)
+		&:focus
+			width: 100%
+	

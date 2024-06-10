@@ -1,13 +1,19 @@
 extends ../layouts/chat.pug
+include ../components/Chat/SearchBar/index.pug
+include ../components/Chat/ChatItem/index.pug
+include ../components/Chat/ContentGag/index.pug
 
 block variables 
 	- const title = "Air чат";
 	
-//- block head
-//- 	link(rel="stylesheet", href="../components/SignIn/style.sass")
-
 block content 
 	main.page
 		.chat
-			aside.chat__column
-			div.chatcontent
+			aside.chat__column.aside
+				+searchBar
+				//- +chatItem
+			div.chat__content.content
+				+contentGag
+				//- +contentHeader
+				//- +contentBody
+				//- +contentSendout
