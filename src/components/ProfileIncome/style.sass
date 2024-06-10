@@ -1,0 +1,33 @@
+@import "../../styles/sass-mixins"
+@import "../../styles/vars"
+
+.aside
+	&__profileIncome
+		a
+			display: flex
+			flex-direction: row
+			align-items: flex-start
+			gap: rem(5)
+			width: fit-content
+			transition: all 0.25s ease 0s
+			font-family: "InterRegular", sans-serif
+			font-size: rem(18)
+			position: relative
+
+			svg
+				transform: translate(0%, 5%)
+				transition: all 0.35s ease 0s
+				
+			&:hover
+				color: $linkColor
+				cursor: pointer
+				animation: shift .1s linear normal running 1 forwards
+				svg
+					fill: $linkColor
+			
+
+@keyframes shift
+	0%
+		transform: translate(0%, 0%)
+	100%
+		transform: translate(2%, 0%)

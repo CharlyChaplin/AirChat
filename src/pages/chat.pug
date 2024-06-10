@@ -2,6 +2,8 @@ extends ../layouts/chat.pug
 include ../components/Chat/SearchBar/index.pug
 include ../components/Chat/ChatItem/index.pug
 include ../components/Chat/ContentGag/index.pug
+include ../components/Logo/index.pug
+include ../components/ProfileIncome/index.pug
 
 block variables 
 	- const title = "Air чат";
@@ -10,8 +12,14 @@ block content
 	main.page
 		.chat
 			aside.chat__column.aside
-				+searchBar
-				//- +chatItem
+				.aside__header
+					.aside__headerTop
+						+logo('../../static/assets/logo/logo.svg')
+						+profileIncome
+					.aside__headerBody
+						+searchBar
+				.aside__chatsBody
+					//- +chatItem
 			div.chat__content.content
 				+contentGag
 				//- +contentHeader

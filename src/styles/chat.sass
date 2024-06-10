@@ -15,11 +15,26 @@
 	&__content
 		width: 100%
 .aside
-	border-right: rem(1) solid rgba($logoColor, .5)
+	border-right: rem(2) solid rgba($logoColor, .5)
 	display: flex
 	flex-direction: column
 	align-items: flex-start
-	padding: rem(15) rem(10)
+	padding-top: rem(15)
+	padding-bottom: rem(15)
+	&__header
+		width: 100%
+		display: flex
+		flex-direction: column
+		gap: rem(15)
+		padding: 0 rem(10) rem(15) rem(10)
+		// border-bottom: rem(1) solid rgba($linkColor, .26)
+	&__headerTop
+		display: flex
+		flex-direction: row
+		align-items: center
+		justify-content: space-between
+	&__headerBody
+		// 
 .content
 	width: 100%
 	height: 100%
