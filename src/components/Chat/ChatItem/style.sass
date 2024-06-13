@@ -1,16 +1,85 @@
-.aside
-	
+@import "../../../styles/sass-mixins"
+@import "../../../styles/vars"
+
+
+
 .chatItem
-	&__chatItem
-		
+	width: 100%
+	cursor: pointer
+	padding: rem(10) rem(5)
+	transition: all 0.25s ease 0s
+	border-bottom: rem(1) solid rgba($linkColor, .15)
+	max-height: rem(73)
+	&:hover
+		background-color: rgba($logoColor, .15)
 	&__box
+		display: flex
+		flex-direction: row
+		gap: rem(5)
+		align-items: center
 	&__logo
+		max-width: rem(55)
+		padding-left: rem(5)
+		padding-right: rem(5)
+	&__logoContent
+		width: 100%
+		border: rem(1) solid rgba($logoColor, .4)
+		border-radius: 50%
+		box-shadow: rem(2) rem(2) rem(5) 0px rgba(0, 0, 0, 0.15)
+		padding: rem(5)
+		img
+			max-width: 100%
 	&__caption
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		gap: rem(9)
+		flex: 1 1 auto
 	&__name
+		font-family: "InterSemibold", sans-serif
 	&__desc
-	&__owner
+		display: flex
+		flex-direction: row
+		gap: rem(5)
+		justify-content: flex-start
+		align-items: center
+		@include textclip($strcount: 2)
 		span
+			font-family: "InterLight", sans-serif
+			font-size: rem(12)
+			color: rgba($blackColor, .5)
+			line-height: rem(14)
+	&__owner
+		font-family: "InterSemibold", sans-serif
+		font-size: rem(12)
 	&__info
+		display: flex
+		flex-direction: column
+		align-items: flex-end
+		justify-content: space-between
+		gap: rem(12)
 	&__time
+		display: block
+		font-family: "InterLight", sans-serif
+		font-size: rem(12)
+		white-space: nowrap
+	&__quantity
+		height: rem(20)
 	&__quantityWrapper
+		display: flex
+		flex-direction: row
+		justify-content: center
+		align-items: center
+		border-radius: 50%
+		font-family: "InterRegular", sans-serif
+		font-size: rem(12)
+		background-color: $logoColor
+		color: $whiteColor
+		line-height: rem(12)
+		max-width: rem(20)
+		max-height: rem(20)
+		width: 100%
+		padding: rem(12)
+		margin-right: rem(2)
 	&__quantityValue
+		font-weight: bold

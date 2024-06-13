@@ -2,10 +2,11 @@ mixin chatItem(userLogo, userName, isOwner = false, contentType = null, lastData
 	append head
 		link(rel="stylesheet" href="../components/Chat/ChatItem/style.sass")
 
-	.aside__chatItem
+	.aside__chatItem.chatItem
 		.chatItem__box
 			.chatItem__logo
-				img(src=userLogo, alt="userIcon")
+				.chatItem__logoContent
+					img(src=userLogo, alt="userIcon")
 			.chatItem__caption
 				.chatItem__name
 					span #{userName}
@@ -19,8 +20,11 @@ mixin chatItem(userLogo, userName, isOwner = false, contentType = null, lastData
 							if isOwner
 								.chatItem__owner Вы:
 							span Стикер
+						default
+							span #{contentType}
 			.chatItem__info
 				time.chatItem__time #{lastData}
-				.chatItem__quantityWrapper
+				.chatItem__quantity
 					if quantity
-						span.chatItem__quantityValue #{quantity}
+						.chatItem__quantityWrapper
+							span.chatItem__quantityValue #{quantity}
