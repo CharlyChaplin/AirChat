@@ -5,7 +5,7 @@
 	"main": "index.js",
 	"scripts": {
 		"clear": "rm -R -f ./dist ./.parcel-cache",
-		"dev": "npm run clear && parcel --no-source-maps ./src/pages/index.pug --no-cache && parcel watch ./*",
+		"dev": "npm run clear && parcel --no-source-maps ./src/pages/index.pug && parcel watch ./*",
 		"build": "parcel build ./index.pug"
 	},
 	"author": "Crash",

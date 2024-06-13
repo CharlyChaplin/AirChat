@@ -1,6 +1,26 @@
-mixin chatItem()
+mixin chatItem(userLogo, userName, isOwner = false, contentType = null, lastData, quantity)
 	append head
-		link(rel="stylesheet", href="../components/Chat/ChatItem/style.sass")
+		link(rel="stylesheet" href="../components/Chat/ChatItem/style.sass")
 
 	.aside__chatItem
-		div ChatItem
+		.chatItem__box
+			.chatItem__logo
+				img(src=userLogo, alt="userIcon")
+			.chatItem__caption
+				.chatItem__name
+					span #{userName}
+				.chatItem__desc
+					case contentType
+						when "image"
+							if isOwner
+								.chatItem__owner Вы:
+							span Изображение
+						when "sticker"
+							if isOwner
+								.chatItem__owner Вы:
+							span Стикер
+			.chatItem__info
+				time.chatItem__time #{lastData}
+				.chatItem__quantityWrapper
+					if quantity
+						span.chatItem__quantityValue #{quantity}
