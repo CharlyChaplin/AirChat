@@ -1,23 +1,25 @@
-@import "../../styles/sass-mixins"
+@import "./vars"
 
 .form
+	padding: rem(20)
+	width: fit-content
+	margin: 0 auto
 	&__wrapper
-		// 
+		border: rem(1) solid $linkColor
+		border-radius: rem(27)
 	&__content
 		padding: rem(40) rem(50)
-		border: rem(1) solid #0000FF
-		border-radius: rem(27)
 	&__header
 		// 
 	&__caption
 		font-family: "InterRegular", sans-serif
 		margin-bottom: rem(100)
 		&-text
-			color: rgb(0, 0, 255, .75)
+			color: rgb($linkColor, .75)
 			font-size: rem(40)
 			margin-bottom: rem(11)
 		&-desc-text
-			color: #000
+			color: $blackColor
 			font-size: rem(20)
 	&__body
 		display: flex
@@ -27,7 +29,7 @@
 	&__footer
 		font-family: "InterRegular", sans-serif
 		font-size: rem(16)
-		color: #000
+		color: $blackColor
 	&__button
 		margin-bottom: rem(10)
 		width: 100%

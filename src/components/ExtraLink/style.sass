@@ -1,9 +1,13 @@
 @import ../../styles/vars
 
-.link
+.link__forgotten,
+.link__welcome,
+.link__back,
+.link__error
 	color: $linkColor
 	font-family: "InterRegular", sans-serif
 	position: relative
+	width: fit-content
 	&::after
 		content: ''
 		position: absolute
@@ -20,11 +24,3 @@
 			opacity: 1
 			width: 100%
 			left: 0
-	&__forgotten
-		@extend .link
-	&__welcome
-		@extend .link
-	&__back
-		@extend .link
-	&__error
-		@extend .link

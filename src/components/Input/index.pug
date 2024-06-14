@@ -1,10 +1,4 @@
-include ../ExtraLink/index.pug
-
 mixin inputType(type, id, placeholder="", descText="", errText="", forgotFactor=true)
-
-	append block head
-		link(rel="stylesheet", href="../components/Input/style.sass")
-		link(rel="stylesheet", href="../components/ExtraLink/style.sass")
 		
 	fieldset.input
 		label.input__label(for=id)

@@ -1,8 +1,7 @@
-include ../utils/pug/mixins/index-mixin.pug
+include ../components/TitleData/titleData.pug
 
 block variables
-	- let title = "Default Page"
-	//- - let styles = []
+	- let title = ""
 
 doctype html
 html(lang="ru")
@@ -11,9 +10,11 @@ html(lang="ru")
 		meta(name="viewport" content="width=device-width, initial-scale=1.0")
 		
 		block head
-		+stlinc(['fonts', 'null', 'styles', 'sass-mixins'])
-		//- +stlinc(styles)
-		title #{title}
+			link(rel="stylesheet", href='../styles/fonts.sass')
+			link(rel="stylesheet", href='../styles/null.sass')
+			link(rel="stylesheet", href='../styles/styles.sass')
+			link(rel="stylesheet", href='../styles/sass-mixins.sass')
+			title #{title}
 
 	body 
 		.wrapper

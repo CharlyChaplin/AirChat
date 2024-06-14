@@ -1,4 +1,3 @@
-@import "../../styles/sass-mixins"
 @import "../../styles/vars"
 
 .input
@@ -13,12 +12,12 @@
 		margin-left: $marginLeftInputDescription
 	&__textdata
 		font-family: "InterLight", sans-serif
-		border: rem(1) solid #0000FF
+		border: rem(1) solid $linkColor
 		border-radius: rem(7)
 		padding: rem(10)
 		margin-bottom: rem(5)
 		&:focus
-			border: rem(1) solid #5A5
+			border: rem(1) solid $inputFocusBorderColor
 		&::placeholder
 			font-size: rem(16)
 			color: $placeholder_color
@@ -27,7 +26,7 @@
 		flex-direction: row
 		justify-content: space-between
 	&__errDesc
-		color: #F00
+		color: $redColor
 		font-family: "InterRegular", sans-serif
 		font-size: rem(13)
 		margin-left: $marginLeftInputDescription
