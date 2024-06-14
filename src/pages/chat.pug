@@ -26,7 +26,7 @@ block content
 						+searchBar
 				.aside__chatsBody
 					each elem in chats.data
-						+chatItem(elem.srcAvatar, elem.userName, elem.ownFactor, elem.lastMessage, elem.time, elem.countNotReadMessage)
+						+chatItem(elem.srcAvatar, elem.userName, elem.ownFactor, elem.lastMessage, elem.timeValue, elem.newMessageCount)
 			div.chat__content.content
 				+contentGag
 				//- +contentHeader

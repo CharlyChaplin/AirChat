@@ -5,96 +5,96 @@
 			"userName": "Андрей",
 			"ownFactor": false,
 			"lastMessage": ":image",
-			"time": "10:49",
-			"countNotReadMessage": 2
+			"timeValue": "10:49",
+			"newMessageCount": 2
 		},
 		{
 			"srcAvatar": "https://i.pravatar.cc/56",
 			"userName": "Киноклуб",
 			"ownFactor": true,
 			"lastMessage": ":sticker",
-			"time": "12:00",
-			"countNotReadMessage": 0
+			"timeValue": "12:00",
+			"newMessageCount": 0
 		},
 		{
 			"srcAvatar": "https://i.pravatar.cc/57",
 			"userName": "Илья",
 			"ownFactor": false,
 			"lastMessage": "Друзья, всем привет! У меня для вас очень особенный выпуск новостей!",
-			"time": "15:12",
-			"countNotReadMessage": 4
+			"timeValue": "15:12",
+			"newMessageCount": 4
 		},
 		{
 			"srcAvatar": "https://i.pravatar.cc/58",
 			"userName": "Вадим",
 			"ownFactor": true,
 			"lastMessage": "Круто!",
-			"time": "Пт",
-			"countNotReadMessage": 0
+			"timeValue": "Пт",
+			"newMessageCount": 0
 		},
 		{
 			"srcAvatar": "https://i.pravatar.cc/59",
 			"userName": "Тет-а-теты",
 			"ownFactor": false,
 			"lastMessage": "И Human Interface Guidelines и Material Design для вас рекомендуют",
-			"time": "Ср",
-			"countNotReadMessage": 0
+			"timeValue": "Ср",
+			"newMessageCount": 0
 		},
 		{
 			"srcAvatar": "https://i.pravatar.cc/60",
 			"userName": "1, 2, 3",
 			"ownFactor": false,
 			"lastMessage": "Миллионы россиян ежедневно проводят десятки часов своего времени",
-			"time": "Пн",
-			"countNotReadMessage": 0
+			"timeValue": "Пн",
+			"newMessageCount": 0
 		},
 		{
 			"srcAvatar": "https://i.pravatar.cc/61",
 			"userName": "Design Destroyer",
 			"ownFactor": false,
 			"lastMessage": "В 2008 году художник Jon Rafman начал собирать пожертвования для своего",
-			"time": "Пн",
-			"countNotReadMessage": 0
+			"timeValue": "Пн",
+			"newMessageCount": 0
 		},
 		{
 			"srcAvatar": "https://i.pravatar.cc/62",
 			"userName": "Day.",
 			"ownFactor": false,
 			"lastMessage": "Так увлёкся работой по курсу, что совсем забыл его анонсировать в чате",
-			"time": "1 Мая 2020",
-			"countNotReadMessage": 0
+			"timeValue": "1 Мая 2020",
+			"newMessageCount": 0
 		},
 		{
 			"srcAvatar": "https://i.pravatar.cc/63",
 			"userName": "Стас Рогозин",
 			"ownFactor": false,
 			"lastMessage": "Можно или сегодня или завтра зайти забрать.",
-			"time": "12 Апреля 2020",
-			"countNotReadMessage": 22
+			"timeValue": "12 Апреля 2020",
+			"newMessageCount": 22
 		},
 		{
 			"srcAvatar": "https://i.pravatar.cc/64",
 			"userName": "Алёна",
 			"ownFactor": false,
 			"lastMessage": "Завтра пойдём в поход в горы. Ты как смотришь на это?",
-			"time": "1 Июля 2006",
-			"countNotReadMessage": 15
+			"timeValue": "1 Июля 2006",
+			"newMessageCount": 15
 		},
 		{
 			"srcAvatar": "https://i.pravatar.cc/65",
 			"userName": "Андрей",
 			"ownFactor": false,
 			"lastMessage": ":image",
-			"time": "10:49",
-			"countNotReadMessage": 2
+			"timeValue": "10:49",
+			"newMessageCount": 2
 		},
 		{
 			"srcAvatar": "https://i.pravatar.cc/66",
 			"userName": "Андрей",
 			"ownFactor": false,
 			"lastMessage": ":image",
-			"time": "10:49",
-			"countNotReadMessage": 2
+			"timeValue": "10:49",
+			"newMessageCount": 2
 		}
 	]
 }
