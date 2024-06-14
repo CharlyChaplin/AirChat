@@ -25,18 +25,8 @@ block content
 					.aside__headerBody
 						+searchBar
 				.aside__chatsBody
-					+chatItem("../../static/assets/user.webp", "Андрей", false, "image", "10:49", 2)
-					+chatItem("https://i.pravatar.cc/55", "Киноклуб", true, "sticker", "12:00")
-					+chatItem("https://i.pravatar.cc/56", "Илья", false, "Друзья, всем привет! У меня для вас очень особенный выпуск новостей!", "15:12", 4)
-					+chatItem("https://i.pravatar.cc/57", "Вадим", true, "Круто!", "Пт")
-					+chatItem("https://i.pravatar.cc/58", "Тет-а-теты", false, "И Human Interface Guidelines и Material Design для вас рекомендуют", "Ср")
-					+chatItem("https://i.pravatar.cc/59", "1, 2, 3", false, "Миллионы россиян ежедневно проводят десятки часов своего времени", "Пн")
-					+chatItem("https://i.pravatar.cc/60", "Design Destroyer", false, "В 2008 году художник Jon Rafman начал собирать пожертвования для своего", "Пн")
-					+chatItem("https://i.pravatar.cc/61", "Day.", false, "Так увлёкся работой по курсу, что совсем забыл его анонсировать в чате", "1 Мая 2020")
-					+chatItem("https://i.pravatar.cc/62", "Стас Рогозин", True, "Можно или сегодня или завтра зайти забрать.", "12 Апреля 2020", 22)
-					+chatItem("https://i.pravatar.cc/63", "Алёна", False, "Завтра пойдём в поход в горы. Ты как смотришь на это?", "1 Июля 2006", 15)
-					+chatItem("https://i.pravatar.cc/64", "Андрей", False, "image", "10:49", 2)
-					+chatItem("https://i.pravatar.cc/65", "Андрей", False, "image", "10:49", 2)
+					each elem in chats.data
+						+chatItem(elem.srcAvatar, elem.userName, elem.ownFactor, elem.lastMessage, elem.time, elem.countNotReadMessage)
 			div.chat__content.content
 				+contentGag
 				//- +contentHeader
