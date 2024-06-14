@@ -1,0 +1,36 @@
+@import "./vars"
+
+/* width */
+::-webkit-scrollbar
+	width: rem(5)
+
+/* The track NOT covered by the handle.*/
+::-webkit-scrollbar-track-piece
+	background: rgba($linkColor, .10)
+	border-radius: rem(5)
+
+/* button */
+::-webkit-scrollbar-button
+	background: transparent
+	height: rem(5)
+
+/* Handle */
+::-webkit-scrollbar-thumb
+	background: lighten($linkColor, 40%)
+	border-radius: rem(5)
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover
+	background: lighten($linkColor, 35%)
+
+/* Track */
+// ::-webkit-scrollbar-track
+// 	border-radius: rem(5)
+
+/* Corner */
+// ::-webkit-scrollbar-corner
+// 	background: $linkColor
+
+/* Resizer */
+// ::-webkit-resizer
+// 	background: $linkColor
