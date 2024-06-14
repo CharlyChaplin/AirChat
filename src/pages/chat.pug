@@ -11,9 +11,9 @@ block variables
 	- const title = "Air чат";
 
 prepend head
-	link(rel="stylesheet", href="../components/ExtraLink/style.sass")
-	link(rel="stylesheet", href="../styles/chat.sass")
-	
+	link(rel="stylesheet" href="../components/ExtraLink/style.sass")
+	link(rel="stylesheet" href="../styles/chat.sass")
+
 block content 
 	main.page
 		.chat
@@ -32,3 +32,6 @@ block content
 				//- +contentHeader
 				//- +contentBody
 				//- +contentSendout
+
+append scripts
+	script(src="../utils/chat.js") 
