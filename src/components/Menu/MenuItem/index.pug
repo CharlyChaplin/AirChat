@@ -1,0 +1,15 @@
+include ../../Icons/addUser.pug
+include ../../Icons/removeUser.pug
+
+
+prepend head
+	link(rel="stylesheet" href="../components/Menu/MenuItem/style.sass")
+
+mixin menuItem(cls, content, link, icon)
+	li(class=cls)
+		div
+			if icon === "+"
+				+addUserIcon
+			else if icon === "-"
+				+removeUserIcon
+		a(href=link) #{content}

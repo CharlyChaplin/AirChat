@@ -1,0 +1,10 @@
+include ./MenuItem/index.pug
+
+prepend head
+	link(rel="stylesheet" href="../components/Menu/style.sass")
+
+mixin menu(menuClassName, arr)
+	div(class=`${menuClassName} ${menuClassName}--hidden`)
+		ul(class=`${menuClassName}__list`)
+			each elem in arr
+				+menuItem(`${menuClassName}__listItem`, elem.content, elem.link, elem.contentIcon)

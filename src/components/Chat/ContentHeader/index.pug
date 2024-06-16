@@ -1,5 +1,6 @@
 include ../Avatar/index.pug
 include ../../Burger/index.pug
+include ../../Menu/index.pug
 
 prepend head
 	link(rel="stylesheet" href="../components/Chat/ContentHeader/style.sass")
@@ -12,3 +13,15 @@ mixin contentHeader()
 			span Киноклуб
 		.header-content__menu
 			+burgerIcon
+			+menu("menu", [
+				{
+					"contentIcon": "+",
+					"content": "Добавить участника",
+					"link": "#"
+				},
+				{
+					"contentIcon": "-",
+					"content": "Удалить участника",
+					"link": "#"
+				}
+			])

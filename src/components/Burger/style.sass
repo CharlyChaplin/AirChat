@@ -7,19 +7,16 @@
 	transition: all 0.3s ease 0s
 	box-shadow: rem(0) rem(0) rem(3) rem(0) rgba($blackColor, 0)
 
-	&:hover
+	&:hover, &--active
 		box-shadow: rem(0) rem(0) rem(3) rem(0) rgba($blackColor, .3)
 
-	&:hover span 
+	&:hover span, &--active &__wrapper span
 		width: 50%
 
-	&:hover .menu-icon__wrapper
-		border-radius: rem(3)
-
-	&:hover .menu-icon__wrapper:before
+	&:hover .menu-icon__wrapper:before, &--active &__wrapper:before
 		width: 70%
 
-	&:hover .menu-icon__wrapper:after
+	&:hover .menu-icon__wrapper:after, &--active &__wrapper:after
 		width: 90%
 
 	&__wrapper

@@ -1,0 +1,27 @@
+@import "../../styles/vars"
+
+.menu
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+	position: relative
+	transition: all 0.25s ease 0s
+	&--hidden
+		visibility: hidden
+		opacity: 0
+	&__list
+		position: absolute
+		left: 0
+		bottom: 0
+		transform: translate(-100%, 140%)
+		width: fit-content
+		outline: rem(1) solid rgba($logoColor, .25)
+		border-radius: rem(10)
+		background-color: $whiteColor
+		box-shadow: rem(2) rem(2) rem(6) rem(0) rgba($blackColor, .15)
+		overflow: hidden
+		display: flex
+		flex-direction: column
+		gap: rem(5)
+		visibility: visible
+		opacity: 1

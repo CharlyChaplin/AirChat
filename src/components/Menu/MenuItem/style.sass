@@ -1,0 +1,24 @@
+@import "../../../styles/vars"
+
+.menu__listItem
+	display: flex
+	flex-direction: row
+	align-items: center
+	justify-content: flex-start
+	gap: rem(10)
+	padding: rem(5) rem(10)
+	font-family: "InterRegular", sans-serif
+	font-size: rem(16)
+	background-color: $whiteColor
+	transition: all 0.25s ease 0s
+	&:hover
+		background-color: rgba($activeMenuHoverColor, .25)
+	div
+		width: rem(20)
+		height: rem(20)
+		svg
+			width: 100%
+			height: 100%
+			stroke: $logoColor
+	a
+		white-space: nowrap
