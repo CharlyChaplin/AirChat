@@ -1,0 +1,6 @@
+prepend head
+	link(rel="stylesheet" href="../components/Chat/DateMessage/style.sass")
+
+mixin dateMessage(isDate)
+	.mainDate
+		time(datetime=isDate) #{isDate}

@@ -6,6 +6,7 @@ include ../components/Chat/ChatItem/index.pug
 include ../components/Chat/Avatar/index.pug
 include ../components/Chat/ContentGag/index.pug
 include ../components/Chat/ContentHeader/index.pug
+include ../components/Chat/ContentBody/index.pug
 include ../components/Logo/index.pug
 include ../components/ProfileIncome/index.pug
 
@@ -14,7 +15,6 @@ block variables
 
 prepend head
 	link(rel="stylesheet" href="../styles/chat.sass")
-	script(src="../utils/chat.js" async)
 
 block content 
 	main.page
@@ -27,11 +27,13 @@ block content
 					.aside__headerBody
 						+searchBar
 				.aside__chatsBody
-					each elem in chats.data
+					each elem in chats.payload
 						+chatItem(elem.srcAvatar, elem.userName, elem.ownFactor, elem.lastMessage, elem.timeValue, elem.newMessageCount)
 			div.chat__content.content
 				+contentGag
 				.content__wrapper.content__wrapper--hidden
 					+contentHeader
-					//- +contentBody
+					+contentBody
 					//- +contentSendout
+block scripts
+	script(src="../utils/chat.js")

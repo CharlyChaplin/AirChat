@@ -1,0 +1,28 @@
+include ../../Icons/hasSent.pug
+include ../../Icons/hasRead.pug
+
+prepend head
+	link(rel="stylesheet" href="../components/Chat/Message/style.sass")
+
+mixin message(content)
+	div(class=content.owner ? "msg msg--right" : "msg")
+		div(class=content.owner ? "msg__wrapper msg__wrapper--right" : "msg__wrapper")
+			.msg__content
+				if content.type === 'text'
+					!= content.msg
+				else if content.type === 'image'
+					img(src=content.msg alt="image")
+			
+			.msg__footer
+				.msg__status
+					.msg__hasSent
+						if content.hasSent && content.hasRead
+							+hasReadIcon
+						else if content.hasSent
+							+hasSentIcon
+						else if content.hasRead
+							+hasReadIcon
+				if content.type === 'image'
+					.msg__time.msg__time--filled= content.receiveTime
+				else
+					.msg__time= content.receiveTime

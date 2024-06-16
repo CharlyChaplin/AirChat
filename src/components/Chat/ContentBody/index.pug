@@ -1,0 +1,15 @@
+include ../Message/index.pug
+include ../DateMessage/index.pug
+
+prepend head
+	link(rel="stylesheet", href="../components/Chat/ContentBody/style.sass")
+
+
+mixin contentBody()
+	.content__body
+		.chat-content
+			.chat-content__mainDate
+				+dateMessage("1 апреля")
+			.chat-content__message
+				each msg in messages.payload
+					+message(msg)
