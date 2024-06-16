@@ -20,6 +20,9 @@
 	flex-direction: column
 	align-items: flex-start
 	padding-top: rem(15)
+	&::-webkit-scrollbar
+		transition: width 0.25s ease 0s
+		width: 0
 	&__header
 		width: 100%
 		display: flex
@@ -37,8 +40,18 @@
 	&__chatsBody
 		height: 100%
 		width: 100%
+	&:hover
+		&::-webkit-scrollbar
+			width: rem(5)
+
 .content
 	width: 100%
 	height: 100%
 	display: flex
 	flex-direction: column
+	&__wrapper
+		height: 100%
+		display: flex
+		flex-direction: column
+		&--hidden
+			display: none

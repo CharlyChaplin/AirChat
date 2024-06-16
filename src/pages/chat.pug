@@ -3,7 +3,9 @@ extends ../layouts/index.pug
 include ../components/ExtraLink/index.pug
 include ../components/Chat/SearchBar/index.pug
 include ../components/Chat/ChatItem/index.pug
+include ../components/Chat/Avatar/index.pug
 include ../components/Chat/ContentGag/index.pug
+include ../components/Chat/ContentHeader/index.pug
 include ../components/Logo/index.pug
 include ../components/ProfileIncome/index.pug
 
@@ -11,8 +13,8 @@ block variables
 	- const title = "Air чат";
 
 prepend head
-	link(rel="stylesheet" href="../components/ExtraLink/style.sass")
 	link(rel="stylesheet" href="../styles/chat.sass")
+	script(src="../utils/chat.js" async)
 
 block content 
 	main.page
@@ -29,9 +31,7 @@ block content
 						+chatItem(elem.srcAvatar, elem.userName, elem.ownFactor, elem.lastMessage, elem.timeValue, elem.newMessageCount)
 			div.chat__content.content
 				+contentGag
-				//- +contentHeader
-				//- +contentBody
-				//- +contentSendout
-
-append scripts
-	script(src="../utils/chat.js") 
+				.content__wrapper.content__wrapper--hidden
+					+contentHeader
+					//- +contentBody
+					//- +contentSendout

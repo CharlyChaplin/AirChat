@@ -1,0 +1,14 @@
+include ../Avatar/index.pug
+include ../../Burger/index.pug
+
+prepend head
+	link(rel="stylesheet" href="../components/Chat/ContentHeader/style.sass")
+
+mixin contentHeader()
+	.content__header.header-content
+		.header-content__avatar
+			+userAvatar
+		.header-content__owner
+			span Киноклуб
+		.header-content__menu
+			+burgerIcon

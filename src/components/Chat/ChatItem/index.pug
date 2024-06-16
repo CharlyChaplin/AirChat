@@ -5,9 +5,8 @@ prepend head
 mixin chatItem(userLogo, userName, isOwner = false, contentType = null, lastData, quantity)
 	.aside__chatItem.chatItem
 		.chatItem__box
-			.chatItem__logo
-				.chatItem__logoContent
-					img(src=userLogo, alt="user")
+			.chatItem__avatar
+				+userAvatar(userLogo)
 			.chatItem__caption
 				.chatItem__name
 					span #{userName}
