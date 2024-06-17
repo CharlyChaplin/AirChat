@@ -6,6 +6,7 @@ const chatContent = document.querySelector('.content__wrapper');
 const burgerIcon = document.querySelector('.menu-icon');
 const burgerIconInnerWrapper = document.querySelector('.menu-icon__wrapper');
 const burgerMenu = document.querySelector('.menu');
+const msgBox = document.querySelector('.content__msg-input');
 
 
 // Handle toggle Gag page/Content page
@@ -16,6 +17,7 @@ function addActiveClass(elem) {
 	elem.classList.add('chatItem--active');
 	gag.classList.add('content__gag--hidden');
 	chatContent.classList.remove('content__wrapper--hidden');
+	msgBox.focus();
 }
 
 function removeActiveClass() {
@@ -39,3 +41,7 @@ function handleCloseMenu(e) {
 		burgerIcon.classList.remove('menu-icon--active');
 	}
 }
+
+addEventListener("DOMContentLoaded", e => {
+	console.log("Dom loaded");
+})
