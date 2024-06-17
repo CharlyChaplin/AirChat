@@ -2,3 +2,57 @@
 	
 .content
 	&__footer
+		display: flex
+		flex-direction: row
+		align-items: center
+		width: 100%
+	&__form
+		display: flex
+		flex-direction: row
+		align-items: center
+		justify-content: flex-start
+		width: 100%
+		padding: rem(10)
+		gap: rem(10)
+	&__attach
+		max-width: rem(30)
+		max-height: rem(26)
+		width: 100%
+		height: 100%
+		&:hover
+			svg
+				stroke: rgba($blackColor, .7)
+		svg
+			stroke: rgba($blackColor, .5)
+			cursor: pointer
+			width: 100%
+			height: 100%
+			transition: all 0.3s ease 0s
+	&__msg
+		flex: 1 1 auto
+	&__msg-input
+		width: 100%
+		height: rem(39)
+		font-family: "InterRegular", sans-serif
+		font-size: rem(18)
+		padding: rem(10)
+		border-radius: rem(10)
+		background-color: rgba($linkColor, .05)
+		border: rem(1) solid rgba($logoColor, .25)
+		&::placeholder
+			color: rgba($blackColor, .5)
+	&__sendButton
+		max-width: rem(30)
+		max-height: rem(23)
+		width: 100%
+		height: 100%
+		background-color: transparent
+		&:hover
+			svg
+				stroke: darken($logoColor, 25%)
+		svg
+			width: 100%
+			height: 100%
+			stroke: $logoColor
+			cursor: pointer
+			transition: all 0.3s ease 0s

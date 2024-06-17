@@ -7,6 +7,7 @@ include ../components/Chat/Avatar/index.pug
 include ../components/Chat/ContentGag/index.pug
 include ../components/Chat/ContentHeader/index.pug
 include ../components/Chat/ContentBody/index.pug
+include ../components/Chat/ContentFooter/index.pug
 include ../components/Logo/index.pug
 include ../components/ProfileIncome/index.pug
 
@@ -34,6 +35,6 @@ block content
 				.content__wrapper.content__wrapper--hidden
 					+contentHeader
 					+contentBody
-					//- +contentSendout
+					+contentFooter
 block scripts
 	script(src="../utils/chat.js")

@@ -1,7 +1,17 @@
+include ../../Icons/dataAttach.pug
+include ../../Icons/sendMessage.pug
+
 prepend head
 	link(rel="stylesheet", href="../components/Chat/ContentFooter/style.sass")
 
 
 mixin contentFooter()
 	.content__footer
-		span Footer
+		form.content__form
+			.content__attach
+				+dataAttachIcon
+			.content__msg
+				input.content__msg-input(placeholder="Написать сообщение")
+			.content__sendButton
+				+sendMessageIcon
+				
