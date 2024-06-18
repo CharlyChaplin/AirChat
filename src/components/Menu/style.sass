@@ -6,15 +6,16 @@
 	align-items: flex-start
 	position: relative
 	cursor: default
-	transition: all 0.25s ease 0s
+	transition: all 0.4s ease 0s
 	&--hidden
+		transition: all 0.25s ease 0s
 		visibility: hidden
 		opacity: 0
 	&__list
 		position: absolute
 		left: 0
 		bottom: 0
-		transform: translate(-100%, 140%)
+		transform: translate(-90%, 120%)
 		width: fit-content
 		outline: rem(1) solid rgba($logoColor, .25)
 		border-radius: rem(10)
@@ -41,5 +42,4 @@
 		top: 0
 		transform: translate(105%, -110%)
 		&--footer
-			// left: rem(500)
-			// top: rem(-100)
+			// 

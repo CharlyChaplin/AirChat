@@ -5,6 +5,13 @@ prepend head
 
 mixin menu(menuClassName, arr, placement)
 	div(class=`${menuClassName} ${menuClassName}--hidden`)
-		ul(class=placement === "fromHeader" ? `${menuClassName}__list ${menuClassName}__list--header` : `${menuClassName}__list ${menuClassName}__list--footer`)
+		ul(class=placement === "fromHeader"
+			 ? `${menuClassName}__list ${menuClassName}__list--header`
+			 : `${menuClassName}__list ${menuClassName}__list--footer`)
 			each elem in arr
-				+menuItem(`${menuClassName}__listItem`, elem.content, elem.link, elem.contentIcon)
+				+menuItem(
+								`${menuClassName}__listItem`,
+								elem.content,
+								elem.link,
+								elem.contentIcon
+							)
