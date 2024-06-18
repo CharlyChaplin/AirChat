@@ -40,7 +40,6 @@ function removeActiveClass() {
 });
 
 function handleMenuOpen(e) {
-	console.log('e.currentTarget=', e.currentTarget);
 	e.stopPropagation();
 	if (e.currentTarget === burgerIcon) {
 		if (attachIcon.classList.contains('attach-icon--active')) {
@@ -61,7 +60,6 @@ function handleMenuOpen(e) {
 
 // Menu Handle Close
 function handleCloseMenu(e) {
-	// console.log('e.target=', e.target, '\ne.currentTarget=', e.currentTarget);
 	if (e.target !== burgerIcon) {
 		burgerIcon.classList.remove('menu-icon--active');
 		burgerMenu.classList.add('menu--hidden');
