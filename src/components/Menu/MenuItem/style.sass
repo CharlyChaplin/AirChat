@@ -10,7 +10,7 @@
 	font-family: "InterRegular", sans-serif
 	font-size: rem(16)
 	background-color: $whiteColor
-	transition: all 0.5s ease 0s
+	transition: all 0.25s ease 0s
 	&:hover
 		background-color: rgba($activeMenuHoverColor, .25)
 	div
@@ -23,3 +23,7 @@
 	a
 		white-space: nowrap
 		cursor: default
+
+.menu-attach__listItem
+	@extend .menu__listItem
+	

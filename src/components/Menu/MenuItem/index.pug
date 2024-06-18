@@ -1,5 +1,9 @@
 include ../../Icons/addUser.pug
 include ../../Icons/removeUser.pug
+include ../../Icons/imageAttach.pug
+include ../../Icons/videoAttach.pug
+include ../../Icons/fileAttach.pug
+include ../../Icons/geoLocation.pug
 
 
 prepend head
@@ -7,9 +11,23 @@ prepend head
 
 mixin menuItem(cls, content, link, icon)
 	li(class=cls)
-		div
-			if icon === "+"
-				+addUserIcon
-			else if icon === "-"
-				+removeUserIcon
+		case icon
+			when "addTalkGuy"
+				div
+					+addUserIcon
+			when "removeTalkGuy"
+				div
+					+removeUserIcon
+			when "attImg"
+				div
+					+imageAttachIcon
+			when "attVideo"
+				div
+					+videoAttachIcon
+			when "attFile"
+				div
+					+fileAttachIcon
+			when "attGeo"
+				div
+					+geoLocationIcon
 		a(href=link) #{content}

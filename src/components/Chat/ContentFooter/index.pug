@@ -1,5 +1,6 @@
 include ../../Icons/dataAttach.pug
 include ../../Icons/sendMessage.pug
+include ../../Menu/index.pug
 
 prepend head
 	link(rel="stylesheet", href="../components/Chat/ContentFooter/style.sass")
@@ -10,8 +11,30 @@ mixin contentFooter()
 		form.content__form
 			.content__attach
 				+dataAttachIcon
+				+menu("menu-attach", [
+				{
+					"contentIcon": "attImg",
+					"content": "Изображение",
+					"link": "#"
+				},
+				{
+					"contentIcon": "attVideo",
+					"content": "Видео",
+					"link": "#"
+				},
+				{
+					"contentIcon": "attFile",
+					"content": "Файл",
+					"link": "#"
+				},
+				{
+					"contentIcon": "attGeo",
+					"content": "Геолокация",
+					"link": "#"
+				}
+			], "fromFooter")
 			.content__msg
-				input.content__msg-input(placeholder="Написать сообщение" tabindex=0 autofocus="true")
+				input.content__msg-input(placeholder="Написать сообщение..." tabindex=0 autofocus="true")
 			.content__sendButton
 				+sendMessageIcon
 				

@@ -19,9 +19,27 @@
 		outline: rem(1) solid rgba($logoColor, .25)
 		border-radius: rem(10)
 		background-color: $whiteColor
-		box-shadow: rem(2) rem(2) rem(6) rem(0) rgba($blackColor, .15)
+		box-shadow: rem(2) rem(2) rem(6) rem(3) rgba($blackColor, .25)
 		overflow: hidden
 		display: flex
 		flex-direction: column
 		visibility: visible
 		opacity: 1
+		&--header
+			left: 0
+			bottom: 0
+
+.menu-attach
+	@extend .menu
+	&--hidden
+		@extend .menu--hidden
+	&__list
+		@extend .menu__list
+		bottom: unset
+		left: unset
+		right: 0
+		top: 0
+		transform: translate(105%, -110%)
+		&--footer
+			// left: rem(500)
+			// top: rem(-100)
