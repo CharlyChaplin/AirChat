@@ -10,8 +10,8 @@ mixin menu(menuClassName, arr, placement)
 			 : `${menuClassName}__list ${menuClassName}__list--footer`)
 			each elem in arr
 				+menuItem(
-								`${menuClassName}__listItem`,
+								`${menuClassName}__listItem ${elem.btnClass}`,
 								elem.content,
-								elem.link,
+								null,
 								elem.contentIcon
 							)

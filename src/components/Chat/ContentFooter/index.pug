@@ -13,28 +13,28 @@ mixin contentFooter()
 				+dataAttachIcon
 				+menu("menu-attach", [
 				{
-					"contentIcon": "attImg",
+					"contentIcon": "addImg",
 					"content": "Изображение",
-					"link": "#"
+					"btnClass": "cls__addImg"
 				},
 				{
-					"contentIcon": "attVideo",
+					"contentIcon": "addVideo",
 					"content": "Видео",
-					"link": "#"
+					"btnClass": "cls__addVideo"
 				},
 				{
-					"contentIcon": "attFile",
+					"contentIcon": "addFile",
 					"content": "Файл",
-					"link": "#"
+					"btnClass": "cls__addFile"
 				},
 				{
-					"contentIcon": "attGeo",
+					"contentIcon": "addGeo",
 					"content": "Геолокация",
-					"link": "#"
+					"btnClass": "cls__addGeo"
 				}
 			], "fromFooter")
 			.content__msg
 				input.content__msg-input(placeholder="Написать сообщение..." tabindex=0 autofocus="true")
-			.content__sendButton
+			button.content__sendButton
 				+sendMessageIcon
 				

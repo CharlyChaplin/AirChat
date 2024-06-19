@@ -5,6 +5,7 @@ include ../../Menu/index.pug
 prepend head
 	link(rel="stylesheet" href="../components/Chat/ContentHeader/style.sass")
 
+
 mixin contentHeader()
 	.content__header.header-content
 		.header-content__avatar
@@ -17,11 +18,27 @@ mixin contentHeader()
 				{
 					"contentIcon": "addTalkGuy",
 					"content": "Добавить участника",
-					"link": "#"
+					"btnClass": "cls__addTalkGuy"
 				},
 				{
 					"contentIcon": "removeTalkGuy",
 					"content": "Удалить участника",
-					"link": "#"
+					"btnClass": "cls__removeTalkGuy"
 				}
 			], "fromHeader")
+		+modalWnd(
+			{
+				caption: "Добавить участника",
+				inputData: {
+					type: "text",
+					id: "addUser",
+					placeholder: "Введите e-mail участника...",
+					descText: "Электронная почта:"
+				},
+				buttonData: {
+					type: "submit",
+					mode: "addUser",
+					text: "Добавить"
+				}
+			}
+		)

@@ -10,6 +10,7 @@ include ../components/Chat/ContentBody/index.pug
 include ../components/Chat/ContentFooter/index.pug
 include ../components/Logo/index.pug
 include ../components/ProfileIncome/index.pug
+include ../components/Modal/index.pug
 
 block variables 
 	- const title = "Air чат";
@@ -37,4 +38,5 @@ block content
 					+contentBody
 					+contentFooter
 block scripts
-	script(src="../utils/chat.js")
+	script(src="../utils/chat.js" type="module")
+	script(src="../utils/modal.js" type="module")

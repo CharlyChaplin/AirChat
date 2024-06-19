@@ -1,0 +1,31 @@
+include ../Button/index.pug
+include ../Input/index.pug
+
+
+prepend head
+	link(rel="stylesheet", href="../components/Modal/style.sass")
+	link(rel="stylesheet", href="../components/Input/style.sass")
+
+
+mixin modalWnd(modalData)
+	.modal.modal--hide(data-type=modalData.inputData.id)
+		.modal__overlay
+		form.modal__wrapper
+			.modal__caption
+				span #{modalData.caption}
+			.modal__body
+				.modal__bodyContent
+					+inputType(
+						modalData.inputData.type,
+						modalData.inputData.id,
+						modalData.inputData.placeholder,
+						modalData.inputData.descText
+					)
+			.modal__footer
+				+buttonAction(
+									modalData.buttonData.type,
+									modalData.buttonData.mode,
+									modalData.buttonData.text
+								)
+								
+	script(type="module", src="../components/Modal/func.js") 

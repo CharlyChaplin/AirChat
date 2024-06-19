@@ -9,7 +9,7 @@ include ../../Icons/geoLocation.pug
 prepend head
 	link(rel="stylesheet" href="../components/Menu/MenuItem/style.sass")
 
-mixin menuItem(cls, content, link, icon)
+mixin menuItem(cls, content, btnClass, icon)
 	li(class=cls)
 		case icon
 			when "addTalkGuy"
@@ -18,16 +18,16 @@ mixin menuItem(cls, content, link, icon)
 			when "removeTalkGuy"
 				div
 					+removeUserIcon
-			when "attImg"
+			when "addImg"
 				div
 					+imageAttachIcon
-			when "attVideo"
+			when "addVideo"
 				div
 					+videoAttachIcon
-			when "attFile"
+			when "addFile"
 				div
 					+fileAttachIcon
-			when "attGeo"
+			when "addGeo"
 				div
 					+geoLocationIcon
-		a(href=link) #{content}
+		button #{content}

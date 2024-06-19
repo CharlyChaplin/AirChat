@@ -13,9 +13,6 @@ const attachMenu = document.querySelector('.menu-attach');
 
 // autoFocus on Input
 const msgBox = document.querySelector('.content__msg-input');
-// addEventListener("DOMContentLoaded", e => {
-// 	console.log("Dom loaded");
-// })
 
 
 // Handle toggle Gag page/Content page
