@@ -1,0 +1,25 @@
+@import "./vars"
+
+
+.profile
+	display: flex
+	flex-direction: row
+	width: 100%
+	height: 100%
+	&__nav
+		flex: 0 1 rem(62)
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		background-image: radial-gradient(rgba($activeMenuHoverColor, .25), rgba($activeMenuHoverColor, .25))
+		&:hover
+			.backButton__img
+				border: rem(1) solid rgba($logoColor, 1)
+				background-color: rgba($logoColor, .35)
+				svg
+					stroke-width: 1
+	&__content
+		flex: 1 1 auto
+		border: rem(1) solid #000
+		

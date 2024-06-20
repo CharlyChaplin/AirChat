@@ -1,0 +1,22 @@
+extends ../layouts/index.pug
+
+include ../components/BackButton/index.pug
+
+
+block variables 
+	-const title = "Личный кабинет";
+	
+prepend head
+	link(rel="stylesheet" href="../styles/profile.sass")
+
+
+block content 
+	main.page
+		.profile
+			.profile__nav
+				+backButton
+			.profile__content
+				div content
+				
+block scripts
+	script(src="../utils/modal.js" type="module")

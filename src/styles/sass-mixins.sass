@@ -1,4 +1,17 @@
 @use "sass:math"
+
+// Минимальная ширина страницы
+$minWidth: 320
+// Ширина макета
+$maxWidth: 1280
+// Ширина ограничевающего контейнера (0 = нет отступа от краёв экрана)
+$maxWidthContainer: 1280
+// Общий отступ от контейнера
+// (например, 30 - это значит по 15px слева и справа, 0 = нет отступа)
+$containerPadding: 0
+
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer + $containerPadding
 	
 //REM
 @function rem($px)

@@ -1,0 +1,36 @@
+@import "../../styles/vars"
+
+.backButton
+	max-width: rem(36)
+	max-height: rem(36)
+	@include adaptiveValue("height", 36, 26)
+	@include adaptiveValue("width", 36, 26)
+	border-radius: 50%
+	cursor: pointer
+	overflow: hidden
+	// Наложить событие на наведение непосредственно на кнопку
+	// &:hover
+		// box-shadow: rem(0) rem(0) rem(8) rem(0) rgba($whiteColor, .5)
+		// .backButton__img
+			// border: rem(1) solid rgba($logoColor, 1)
+			// background-color: rgba($logoColor, .35)
+			// svg
+				// stroke-width: 1
+	&__img
+		transition: all 0.25s ease 0s
+		border-radius: 50%
+		border: rem(1) solid rgba($logoColor, .35)
+		background-color: rgba($logoColor, .25)
+		width: 100%
+		height: 100%
+		position: relative
+		svg
+			transition: all 0.25s ease 0s
+			position: absolute
+			left: 50%
+			top: calc(50% - 1px)
+			transform: translate(-50%, -50%)
+			stroke: $logoColor
+			stroke-width: .25
+			fill: $whiteColor
+			width: 100%
