@@ -24,6 +24,15 @@
 	&__content
 		flex: 1 1 auto
 		display: flex
-		flex-direction: row
-		justify-content: center
+		flex-direction: column
 		align-items: center
+	&__header
+		display: flex
+		flex-direction: column
+		@include adaptiveValue("gap", 15, 15)
+		padding-top: rem(70)
+	&__logo
+		max-width: rem(100)
+		max-height: rem(100)
+	&__userName
+		// 

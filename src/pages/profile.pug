@@ -1,6 +1,8 @@
 extends ../layouts/index.pug
 
-include ../components/BackButton/index.pug
+include ../components/Profile/BackButton/index.pug
+include ../components/Profile/UserLogo/index.pug
+include ../components/Profile/UserName/index.pug
 
 
 block variables 
@@ -16,7 +18,11 @@ block content
 			a.profile__nav(href="./chat.pug")
 				+backButton
 			.profile__content
-				div content
+				.profile__header
+					.profile__logo
+						+userLogo
+					.profile__userName
+						+userName("Имя пользователя")
 				
 block scripts
 	script(src="../utils/modal.js" type="module")

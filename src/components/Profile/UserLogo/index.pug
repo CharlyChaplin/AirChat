@@ -1,0 +1,15 @@
+prepend head
+	link(rel="stylesheet" href="../components/Profile/UserLogo/style.sass")
+
+include ../../Icons/profileUserDefaultLogo.pug
+
+mixin userLogo
+	.userIcon
+		form.userIcon__form
+			.userIcon__overlay
+				input(type="file" hidden accept="image/*" class="userIcon__input")
+			.userIcon__icon
+				+userDefaultLogoIcon
+			.userIcon__img
+			
+		script(src="../components/Profile/UserLogo/addAvatar.js") 
