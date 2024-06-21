@@ -26,13 +26,17 @@
 		display: flex
 		flex-direction: column
 		align-items: center
+		// либо нижнюю закомментировать и добавить на &__header паддинг
+		// либо раскомментировать и убрать на &__header паддинг
+		justify-content: center
 	&__header
+		// padding-top: rem(70)
 		display: flex
 		flex-direction: column
-		@include adaptiveValue("gap", 15, 15)
-		padding-top: rem(70)
+		align-items: center
+		@include adaptiveValue("gap", 25, 15)
 	&__logo
 		max-width: rem(100)
 		max-height: rem(100)
 	&__userName
-		// 
+		width: 100%

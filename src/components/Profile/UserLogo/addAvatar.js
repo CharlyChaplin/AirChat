@@ -10,10 +10,11 @@ overlay.addEventListener('click', e => {
 
 input.addEventListener('input', e => {
 	const file = e.target.files[0];
-
-	createImg(file);
-	userIcon.style.cssText = `display: none`;
-	previewImage.style.cssText = `display: flex`;
+	if (file) {
+		createImg(file);
+		userIcon.style.cssText = `display: none`;
+		previewImage.style.cssText = `display: flex`;
+	}
 });
 
 function createImg(file) {
