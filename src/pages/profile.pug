@@ -3,11 +3,13 @@ extends ../layouts/index.pug
 include ../components/Profile/BackButton/index.pug
 include ../components/Profile/UserLogo/index.pug
 include ../components/Profile/UserName/index.pug
+include ../components/Profile/UserData/index.pug
 
 
 block variables 
 	-const title = "Личный кабинет";
-	
+	-const userDataPayload = [{desc: "Электропочта:", data: "mail@mail.ru", name: "email"},{desc: "Логин:",data: "loginname", name: "login"},{desc: "Имя:",data: "name", name: "first_name"},{desc: "Фамилия:",data: "surname", name: "second_name"},{desc: "Имя в чате:",data: "Den", name: "nickname"},{desc: "Телефон:",data: "+7 (999) 569-15-89", name: "phone"}];
+
 prepend head
 	link(rel="stylesheet" href="../styles/profile.sass")
 
@@ -23,6 +25,8 @@ block content
 						+userLogo
 					.profile__userName
 						+userName("Crash")
-				
+				.profile__userData
+					+userData(userDataPayload)
+
 block scripts
 	script(src="../utils/modal.js" type="module")

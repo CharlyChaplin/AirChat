@@ -8,7 +8,7 @@
 	height: 100%
 	&__nav
 		flex-grow: 0
-		flex-shrink: 1
+		flex-shrink: 0
 		@include adaptiveValue("flex-basis", 62, 42)
 		display: flex
 		flex-direction: column
@@ -26,17 +26,23 @@
 		display: flex
 		flex-direction: column
 		align-items: center
+		width: 100%
+		@include adaptiveValue("padding", 20, 5)
 		// либо нижнюю закомментировать и добавить на &__header паддинг
 		// либо раскомментировать и убрать на &__header паддинг
-		justify-content: center
+		// justify-content: center
 	&__header
-		// padding-top: rem(70)
+		padding-top: rem(50)
 		display: flex
 		flex-direction: column
 		align-items: center
 		@include adaptiveValue("gap", 25, 15)
+		@include adaptiveValue("margin-bottom", 50, 30)
+		width: 100%
 	&__logo
 		max-width: rem(100)
 		max-height: rem(100)
 	&__userName
+		width: 100%
+	&__userData
 		width: 100%
