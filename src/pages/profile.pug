@@ -23,7 +23,9 @@ block content
 			.profile__content
 				.profile__header
 					.profile__logo
-						+userLogo
+						+userLogo("", false)
+					//- .profile__logo.profile__logo--editable
+					//- 	+userLogo("", true)
 					.profile__userName
 						+userName("Crash")
 				.profile__userData
@@ -33,3 +35,4 @@ block content
 
 block scripts
 	script(src="../utils/modal.js" type="module")
+	script(src="../utils/profile.js" type="module")

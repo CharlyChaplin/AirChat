@@ -22,8 +22,21 @@
 		@include adaptiveValue("margin-bottom", 42, 32)
 		@media (max-width: em(479.98))
 			flex-direction: column
+		&--hidden
+			display: none
+	&__applyChanges
+		display: flex
+		flex-direction: row
+		justify-content: center
+		align-items: center
+		@include adaptiveValue("margin-bottom", 42, 32)
+		&--hidden
+			display: none
 	&__exitActions
 		button
 			color: $whiteColor
 			&:hover
 				background-color: $logoutBackColorHover
+	&__changedSubmit
+		&--hidden
+			display: none

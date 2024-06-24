@@ -3,13 +3,26 @@ prepend head
 
 include ../../Icons/profileUserDefaultLogo.pug
 
-mixin userLogo
-	.userIcon
-		form.userIcon__form
-			.userIcon__overlay
-				input(type="file" hidden accept="image/*" class="userIcon__input")
-			.userIcon__icon
-				+userDefaultLogoIcon
-			.userIcon__img
-			
-		script(src="../components/Profile/UserLogo/addAvatar.js") 
+mixin userLogo(path="", editable=false)
+	if editable
+		.userIcon.userIcon__editable
+			form.userIcon__form
+				.userIcon__overlay
+					input(type="file" hidden accept="image/*" class="userIcon__input")
+				if !path
+					.userIcon__icon
+						+userDefaultLogoIcon
+				else
+					.userIcon__img
+						img(src=path, alt="Avatar")
+				
+			script(src="../components/Profile/UserLogo/addAvatar.js")
+		
+	else
+		.userIcon
+			if !path
+				.userIcon__icon
+					+userDefaultLogoIcon
+			else
+				.userIcon__img.userIcon__img
+					img(src=path, alt="Avatar")

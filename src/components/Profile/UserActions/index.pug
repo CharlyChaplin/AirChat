@@ -8,5 +8,8 @@ mixin userActions
 		.userActions__changeActions
 			+buttonAction("button", "changeDataMode", "Изменить данные", "changeDataAction")
 			+buttonAction("button", "changePassMode", "Изменить пароль", "changePassAction")
+		.userActions__applyChanges.userActions__applyChanges--hidden
+			+buttonAction("button", "changeDataMode", "Сохранить", "changedDataSubmit")
 		.userActions__exitActions
 			+buttonAction("button", "logoutMode", "Выйти из аккаунта", "logoutAction")
+			

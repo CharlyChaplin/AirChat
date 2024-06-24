@@ -36,3 +36,13 @@
 	&__data
 		color: $placeholderColor
 		text-align: right
+		transition: all 0.3s ease-in-out 0s
+		&--editable
+			color: $blackColor
+			outline: rem(1) solid rgba($logoColor, .5)
+			border-radius: rem(5)
+			background-color: $whiteColor
+			transition: all 0.3s ease-in-out 0s
+			padding: rem(4) rem(5)
+			&:hover
+				outline: rem(1) solid rgba($logoColor, .8)
