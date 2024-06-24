@@ -2,5 +2,8 @@ prepend head
 	link(rel="stylesheet" href="../components/Button/style.sass")
 
 
-mixin buttonAction(type = "submit", mode = "signin", text = "")
-	button.button__auth(type=type) #{text}
+mixin buttonAction(type = "submit", mode = "signin", text = "", id=null)
+	if id
+		button.button__auth(type=type id=id) #{text}
+	else
+		button.button__auth(type=type) #{text}

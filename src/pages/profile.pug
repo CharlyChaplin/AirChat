@@ -4,6 +4,7 @@ include ../components/Profile/BackButton/index.pug
 include ../components/Profile/UserLogo/index.pug
 include ../components/Profile/UserName/index.pug
 include ../components/Profile/UserData/index.pug
+include ../components/Profile/UserActions/index.pug
 
 
 block variables 
@@ -27,6 +28,8 @@ block content
 						+userName("Crash")
 				.profile__userData
 					+userData(userDataPayload)
+				.profile__actions
+					+userActions
 
 block scripts
 	script(src="../utils/modal.js" type="module")

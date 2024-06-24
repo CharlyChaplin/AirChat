@@ -1,0 +1,29 @@
+@import "../../../styles/vars"
+
+
+.userActions
+	max-width: rem(409)
+	width: 100%
+	margin: 0 auto
+	button
+		font-family: "InterRegular", sans-serif
+		color: $whiteColor
+		letter-spacing: rem(1)
+		padding: rem(4) rem(15)
+		text-transform: unset
+		cursor: default
+		white-space: nowrap
+	&__changeActions
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		align-items: center
+		@include adaptiveValue("gap", 33, 13)
+		@include adaptiveValue("margin-bottom", 42, 32)
+		@media (max-width: em(479.98))
+			flex-direction: column
+	&__exitActions
+		button
+			color: $whiteColor
+			&:hover
+				background-color: $logoutBackColorHover

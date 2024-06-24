@@ -1,0 +1,12 @@
+prepend head
+	link(rel="stylesheet" href="../components/Profile/UserActions/style.sass")
+
+include ../../Button/index.pug
+
+mixin userActions
+	.userActions
+		.userActions__changeActions
+			+buttonAction("button", "changeDataMode", "Изменить данные", "changeDataAction")
+			+buttonAction("button", "changePassMode", "Изменить пароль", "changePassAction")
+		.userActions__exitActions
+			+buttonAction("button", "logoutMode", "Выйти из аккаунта", "logoutAction")
