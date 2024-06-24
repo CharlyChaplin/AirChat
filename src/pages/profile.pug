@@ -9,7 +9,8 @@ include ../components/Profile/UserActions/index.pug
 
 block variables 
 	-const title = "Личный кабинет";
-	-const userDataPayload = [{desc: "Электропочта:", data: "mail@mail.ru", name: "email"},{desc: "Логин:",data: "loginname", name: "login"},{desc: "Имя:",data: "name", name: "first_name"},{desc: "Фамилия:",data: "surname", name: "second_name"},{desc: "Имя в чате:",data: "Den", name: "nickname"},{desc: "Телефон:",data: "+7 (999) 569-15-89", name: "phone"}];
+	-const userDataPayload = [{desc: "Электропочта:", data: "mail@mail.ru", name: "email"},{desc: "Логин:", data: "loginname", name: "login"},{desc: "Имя:",data: "name", name: "first_name"},{desc: "Фамилия:",data: "surname", name: "second_name"},{desc: "Имя в чате:",data: "Den", name: "nickname"},{desc: "Телефон:",data: "+7 (999) 569-15-89", name: "phone"}];
+	-const userDataPassword = [{desc: "Старый пароль:", data: "old", name: "oldPass", class: "change__pass change__pass--old"}, {desc: "Новый пароль:", data: "new", name: "newPass", class: "change__pass change__pass--new"}, {desc: "Ещё раз новый пароль:", data: "new", name: "newPassRetype", class: "change__pass change__pass--renew"}];
 
 prepend head
 	link(rel="stylesheet" href="../styles/profile.sass")
@@ -24,12 +25,14 @@ block content
 				.profile__header
 					.profile__logo
 						+userLogo("", false)
-					//- .profile__logo.profile__logo--editable
-					//- 	+userLogo("", true)
+					.profile__logo.profile__logo--editable.profile__logo--hidden
+						+userLogo("", true)
 					.profile__userName
 						+userName("Crash")
 				.profile__userData
-					+userData(userDataPayload)
+					+userData(userDataPayload, false)
+				.profile__userDataPassEdit.profile__userDataPassEdit--hidden
+					+userData(userDataPassword, true)
 				.profile__actions
 					+userActions
 

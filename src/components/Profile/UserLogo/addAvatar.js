@@ -1,7 +1,7 @@
 const avatarBlock = document.querySelector('.userIcon__editable .userIcon__form');
-const input = document.querySelector('.userIcon__input');
-const userIcon = document.querySelector('.userIcon__icon');
-const overlay = document.querySelector('.userIcon__overlay');
+const input = avatarBlock.querySelector('.userIcon__input');
+const userIcon = avatarBlock.querySelector('.userIcon__icon');
+const overlay = avatarBlock.querySelector('.userIcon__overlay');
 
 
 overlay.addEventListener('click', e => {
@@ -14,7 +14,9 @@ input.addEventListener('input', e => {
 	if (file) {
 		createImg(file);
 		// скрываем иконку и оверлей
-		userIcon.style.cssText = overlay.style.cssText = `display: none`;
+		// userIcon.style.cssText = overlay.style.cssText = `display: none`;
+		userIcon.style.cssText = `display: none`;
+		overlay.style.cssText = `display: none`;
 	}
 });
 

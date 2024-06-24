@@ -2,10 +2,28 @@ prepend head
 	link(rel="stylesheet" href="../components/Profile/UserData/style.sass")
 
 
-mixin userData(mock)
-	.userData
-		form.userData__form
-			each elem in mock
-				.userData__row
-					.userData__desc #{elem.desc}
-					input.userData__data(type="text", value=elem.data name=elem.name disabled).userData__data--cell
+mixin userData(mock, passwordFactor = false)
+	if !passwordFactor
+		.userData
+			form.userData__form
+				each elem in mock
+					.userData__row
+						.userData__desc #{elem.desc}
+						input.userData__data(
+													type="text",
+													value=elem.data,
+													name=elem.name,
+													disabled
+													).userData__data--cell
+	else
+		.userData
+			form.userData__form
+				each elem in mock
+					.userData__row
+						.userData__desc #{elem.desc}
+						input.userData__data(
+													type="password",
+													value=elem.data,
+													name=elem.name,
+													class=elem.class
+													).userData__data--editable
