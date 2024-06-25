@@ -1,14 +1,27 @@
 const modal = document.querySelector('.modal');
-const modalWrapper = document.querySelector('.modal__wrapper');
+const overlay = modal.querySelector('.modal__overlay');
+const actionBtn = modal.querySelector('[type="submit"]');
 const attr = modal.dataset;
 
 
 modal.addEventListener('click', handleFunc);
+actionBtn.addEventListener('click', handleButtonClick);
 
 function handleFunc(e) {
-	if (e.target !== modalWrapper) {
-		if (modal.classList.contains('modal--show')) {
-			modal.classList.replace('modal--show', 'modal--hide');
-		}
+	e.stopPropagation();
+	
+	if (e.target === overlay && e.target !== actionBtn) {
+		closeModal();
+	}
+}
+
+function handleButtonClick(e) {
+	e.preventDefault();
+	closeModal();
+}
+
+function closeModal() {
+	if (modal.classList.contains('modal--show')) {
+		modal.classList.replace('modal--show', 'modal--hide');
 	}
 }

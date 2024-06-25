@@ -39,8 +39,12 @@
 		border-radius: rem(10)
 		background-color: rgba($linkColor, .05)
 		border: rem(1) solid rgba($logoColor, .25)
+		transition: all 0.25s ease 0s
 		&::placeholder
 			color: rgba($blackColor, .5)
+		&:focus, &:active
+			outline: none
+			border: rem(1) solid rgba($logoColor, .7)
 	&__sendButton
 		max-width: rem(30)
 		max-height: rem(23)

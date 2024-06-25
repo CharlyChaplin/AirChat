@@ -18,12 +18,17 @@ const changedDataSubmitBlock = document.querySelector('.userActions__applyChange
 const editPassBtn = document.getElementById('changePassAction');
 // Блок с полями для изменения пароля
 const passwordsBlock = document.querySelector('.profile__userDataPassEdit');
+// Кнопка выхода из аккаунта
+const logoutBtn = document.getElementById('logoutAction');
+
 
 
 // обработчик на кнопку изменения данных пользователя
 editAccountBtn.addEventListener('click', editAccHandler, { once: true });
 // обработчик на кнопку изменения пароля пользователя
 editPassBtn.addEventListener('click', editPassHandler, { once: true });
+// обработчик на кнопку выхода из аккаунта
+logoutBtn.addEventListener('click', logoutHandler);
 
 
 
@@ -36,7 +41,6 @@ function editAccHandler() {
 
 	// ищем все Inputs
 	const inputsCollection = document.querySelectorAll('[class*="--cell"]');
-
 	// Показываем Inputs
 	toggleInputs(inputsCollection, true);
 
@@ -62,6 +66,7 @@ function saveDataHandler(inputsCollection) {
 	// обработчик на кнопку изменения данных пользователя
 	editAccountBtn.addEventListener('click', editAccHandler, { once: true });
 }
+
 // функции редактирования пароля пользователя
 function editPassHandler() {
 	// скрываем блок с пользовательскими данными
@@ -93,6 +98,12 @@ function savePassHandler(inputsCollection) {
 	// обработчик на кнопку изменения данных пользователя
 	editPassBtn.addEventListener('click', editPassHandler, { once: true });
 }
+
+//функция выхода из аккаунта
+function logoutHandler() {
+	window.location.href = 'index.html';
+}
+
 
 
 function toggleInputs(collection = null, factor = null) {
