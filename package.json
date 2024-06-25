@@ -6,7 +6,8 @@
 	"scripts": {
 		"clear": "rm -R -f ./dist ./.parcel-cache",
 		"dev": "npm run clear && parcel --no-source-maps ./src/pages/index.pug && parcel watch ./*",
-		"build": "parcel build ./index.pug"
+		"build": "parcel build ./index.pug",
+		"start": "node server.js"
 	},
 	"author": "Crash",
 	"license": "ISC",
@@ -14,5 +15,8 @@
 		"@parcel/transformer-pug": "^2.12.0",
 		"@parcel/transformer-sass": "^2.12.0",
 		"parcel": "^2.12.0"
+	},
+	"dependencies": {
+		"express": "^4.19.2"
 	}
 }
