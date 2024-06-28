@@ -9,27 +9,27 @@
  * @param {number} step шаг прохода по диапазону
  */
 
-function range(from, to, step = 1) {
+function rangeRight(from, to, step = 1) {
 	if (!from && !to) return [];
 	let result = [];
 	if (!to) {
 		if (from > 0) {
-			for (let i = 0; i < from; i += step) result.push(i);
+			for (let i = from; i > 0; i -= step) result.push(i);
 		} else {
-			for (let i = 0; i > from; i -= step) result.push(i);
+			for (let i = from; i < 0; i += step) result.push(i);
 		}
 	} else {
 		if (to > 0) {
 			if (step === 0) {
-				for (let i = from; i < to; i++) result.push(from);
+				for (let i = to; i > from; i--) result.push(from);
 			} else {
-				for (let i = from; i < to; i += step) result.push(i);
+				for (let i = to; i > from; i -= step) result.push(i);
 			}
 		} else {
 			if (step === 0) {
-				for (let i = from; i > to; i--) result.push(from);
+				for (let i = to; i < from; i++) result.push(from);
 			} else {
-				for (let i = from; i > to; i += step) result.push(i);
+				for (let i = to; i < from; i -= step) result.push(i);
 			}
 		}
 	}
@@ -37,14 +37,14 @@ function range(from, to, step = 1) {
 	return result;
 }
 
-console.log(range(4));				// [ 0, 1, 2, 3 ]
-console.log(range(-4));				// [ 0, -1, -2, -3 ]
-console.log(range(1, 5));			// [ 1, 2, 3, 4 ]
-console.log(range(0, 20, 5));		// [ 0, 5, 10, 15 ]
-console.log(range(0, -4, -1));	// [ 0, -1, -2, -3 ]
-console.log(range(1, 4, 0));		// [ 1, 1, 1 ]
-console.log(range(0));				// []
+console.log(rangeRight(4));				// [ 4, 3, 2, 1 ]
+console.log(rangeRight(-4));				// [ -4, -3, -2, -1 ]
+console.log(rangeRight(1, 5));			// [ 5, 4, 3, 2 ]
+console.log(rangeRight(0, 20, 5));		// [ 20, 15, 10, 5 ]
+console.log(rangeRight(0, -4, -1));		// [ -4, -3, -2, -1 ]
+console.log(rangeRight(1, 4, 0));		// [ 1, 1, 1 ]
+console.log(rangeRight(0));				// []
 
 
 
-export default range;
+export default rangeRight;
