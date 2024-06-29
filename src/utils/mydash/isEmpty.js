@@ -13,7 +13,7 @@ function isEmpty(value) {
 		typeof value === "boolean" ||
 		(typeof value === 'string' && value.length === 0) ||
 		(Array.isArray(value) && value.length === 0) ||
-		(value instanceof Object && (!(value instanceof Map) || !(value instanceof Set)) && Object.keys(value).length === 0) ||
+		(value instanceof Object && (!(value instanceof Map) && !(value instanceof Set)) && Object.keys(value).length === 0) ||
 		(value instanceof Map && value.size === 0) ||
 		(value instanceof Set && value.size === 0)
 	) {
@@ -22,6 +22,8 @@ function isEmpty(value) {
 		return false;
 	}
 }
+
+console.log(isEmpty(new Map([['1', 'str1'], [1, 'num1'], [true, 'bool1']])));
 console.log(isEmpty(null));			// => true
 console.log(isEmpty(true));			// => true
 console.log(isEmpty(1));				// => true
