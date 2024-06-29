@@ -42,4 +42,4 @@ console.log(isEmpty(''));				// => true
 
 
 
-// export default isEmpty;
+export default isEmpty;
