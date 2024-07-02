@@ -1,16 +1,15 @@
 @import "../../../styles/vars"
 
 .avatar
-	display: flex
-	flex-direction: row
+	display: grid
 	width: 100%
-	// height: 100%
 	&__content
 		display: flex
 		flex-direction: row
 		justify-content: center
 		align-items: center
 		width: 100%
+		height: 100%
 		border: rem(1) solid rgba($logoColor, .4)
 		border-radius: 50%
 		overflow: hidden
@@ -21,5 +20,5 @@
 			object-fit: cover
 		svg
 			fill: $blackColor
-			width: 70%
 			height: 70%
+			width: 100%
