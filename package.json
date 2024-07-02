@@ -5,15 +5,17 @@
 	"main": "index.js",
 	"scripts": {
 		"clear": "rm -R -f ./dist ./.parcel-cache",
-		"dev": "npm run clear && parcel --no-source-maps ./src/pages/index.pug && parcel watch ./*",
+		"dev": "parcel ./src/pages/index.pug",
 		"build": "parcel build ./index.pug",
-		"start": "node server.js"
+		"start": "node --env-file=.env server.js"
 	},
 	"author": "Crash",
 	"license": "ISC",
 	"devDependencies": {
+		"@parcel/packager-raw-url": "^2.12.0",
 		"@parcel/transformer-pug": "^2.12.0",
 		"@parcel/transformer-sass": "^2.12.0",
+		"@parcel/transformer-webmanifest": "^2.12.0",
 		"parcel": "^2.12.0"
 	},
 	"dependencies": {
