@@ -3,7 +3,7 @@ mixin inputType(type, id, placeholder="", descText="", errText="", forgotFactor=
 	fieldset.input
 		label.input__label(for=id)
 			.input__inputDesc #{descText}
-			input.input__textdata(type=type id=id placeholder=placeholder)
+			input.input__textdata(type=type id=id placeholder=placeholder name=id)
 			.input__footer
 				span.input__errDesc #{errText}
 				if type === 'password' && forgotFactor

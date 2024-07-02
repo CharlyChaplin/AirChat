@@ -17,7 +17,7 @@ block content
 	main.page 
 		.page__form.form
 			.form__wrapper
-				form.form__content
+				form.form__content(id="signin" method="post")
 					.form__header
 						.form__caption
 							+titleData("Привет!", "Рады видеть тебя здесь!")
@@ -25,7 +25,7 @@ block content
 						+inputType("text", "login", "Введите ваш e-mail...", "Электронная почта:")
 						+inputType("password", "password", "Введите ваш пароль...", "Пароль:")
 					.form__footer
-						.form__button 
+						.form__button
 							+buttonAction("submit", "signin", "Войти")
 						.form__signInOutLink
 							span Новичок?
@@ -34,3 +34,6 @@ block content
 						div(style="display: flex; flex-direction: column; width: fit-content; gap: 15px; margin-top: 25px")
 							+extraLink("./errorpage.pug", "link__error", "Страница ошибки")
 							+extraLink("./chat.pug", "link__error", "Страница чатов")
+							
+block scripts
+	script(type="module" src="../utils/auth.js")

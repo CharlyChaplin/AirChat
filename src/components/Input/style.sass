@@ -18,6 +18,7 @@
 		margin-bottom: rem(5)
 		&:focus
 			border: rem(1) solid $inputFocusBorderColor
+			outline: none
 		&::placeholder
 			font-size: rem(16)
 			color: $placeholderColor
@@ -33,6 +34,9 @@
 		opacity: 0
 		height: 0
 		transition: all 0.25s ease 0s
+		position: relative
+		bottom: rem(13)
+		display: block
 		&--show
 			opacity: 1
-			height: auto
+			bottom: 0
