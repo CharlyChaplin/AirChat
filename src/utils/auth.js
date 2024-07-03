@@ -1,7 +1,6 @@
 import { removeFromClassList } from "./functions";
 
 const form = document.querySelector('form');
-const sendButton = form?.querySelector('.button__auth');
 
 
 form.addEventListener('submit', e => submitAction(e, form));
