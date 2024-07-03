@@ -22,10 +22,10 @@ block content
 						.form__caption
 							+titleData("Давай к нам!", "Будем рады видеть тебя здесь!")
 					.form__body 
-						+inputType("text", "login", "Введите ваш e-mail...", "Электронная почта:")
+						+inputType("text", "email", "Введите ваш e-mail...", "Электронная почта:")
 						+inputType("text", "nickname", "Ваш ник в чате...", "Никнейм в чате:")
-						+inputType("text", "realname", "Ваше настоящее имя...", "Имя:")
-						+inputType("text", "realsurname", "Ваша настоящая фамилия...", "Фамилия:")
+						+inputType("text", "first_name", "Ваше настоящее имя...", "Имя:")
+						+inputType("text", "second_name", "Ваша настоящая фамилия...", "Фамилия:")
 						+inputType("text", "phone", "Номер вашего телефона...", "Телефон:")
 						+inputType("password", "password", "Введите ваш пароль...", "Пароль:", "", false)
 						+inputType("password", "renewpassword", "Введите ваш пароль ещё раз...", "Повторите ввод пароля:", "", false)
@@ -35,3 +35,7 @@ block content
 						.form__signInOutLink
 							span Уже зарегистрированы?
 							+extraLink("./index.pug", "link__welcome", "Войти")
+							
+							
+block scripts
+	script(type="module" src="../utils/auth.js")

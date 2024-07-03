@@ -1,5 +1,6 @@
 import { removeFromClassList } from "./functions";
 
+console.log("Hello");
 const form = document.querySelector('form');
 
 
@@ -41,8 +42,7 @@ function validateAll(elems) {
 function validateElem(el) {
 	let isPassed = true;
 	const errElement = el.parentElement.querySelector('.input__errDesc');
-
-	if (el.getAttribute('name').toLowerCase() === 'login') {
+	if (el.getAttribute('name').toLowerCase() === 'email') {
 		const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
 		if (!EMAIL_REGEXP.test(el.value)) {
 			errorShow(errElement, 'Неверный формат почты');
@@ -61,6 +61,22 @@ function validateElem(el) {
 			errorHide(errElement);
 			isPassed = true;
 		}
+	}
+	
+	if (el.getAttribute('name').toLowerCase() === 'nickname') {
+		
+	}
+	
+	if (el.getAttribute('name').toLowerCase() === 'first_name') {
+		
+	}
+	
+	if (el.getAttribute('name').toLowerCase() === 'second_name') {
+		
+	}
+	
+	if (el.getAttribute('name').toLowerCase() === 'phone') {
+		
 	}
 
 	return isPassed;
