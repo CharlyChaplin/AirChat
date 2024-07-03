@@ -25,10 +25,14 @@ function submitAction(e, frm) {
 
 // Устанавливает обработчик на элемент
 function validateAll(elems) {
-	let result = false;
-	
+	// изначально доверяем, что всё прошло
+	let result = true;
+
+	// если хотя бы одна проверка не прошла, то изменяем доверие
 	for (let input of elems) {
-		result = validateElem(input);
+		if (!validateElem(input)) {
+			result = false;
+		}
 	}
 
 	return result;
@@ -38,7 +42,7 @@ function validateAll(elems) {
 function validateElem(el) {
 	let isPassed = true;
 	const errElement = el.parentElement.querySelector('.input__errDesc');
-	
+
 	if (el.getAttribute('name').toLowerCase() === 'login') {
 		const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
 		if (!EMAIL_REGEXP.test(el.value)) {
