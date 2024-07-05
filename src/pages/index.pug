@@ -3,14 +3,12 @@ extends ../layouts/index.pug
 include ../components/ExtraLink/index.pug
 include ../components/Input/index.pug
 include ../components/Button/index.pug
+include ../components/TitleData/index.pug
 
 block variables 
 	-const title = "Вход";
 	
 prepend head
-	link(rel="stylesheet", href="../components/ExtraLink/style.sass")
-	link(rel="stylesheet", href="../components/Input/style.sass")
-	link(rel="stylesheet", href="../components/Button/style.sass")
 	link(rel="stylesheet", href="../styles/index.sass")
 
 block content 

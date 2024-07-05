@@ -1,3 +1,7 @@
+prepend head
+	link(rel="stylesheet" href="../components/ExtraLink/style.sass")
+	
+	
 mixin extraLink(link="#", cls="", text)
 	if (cls) 
 		a(href=link class=cls) #{text}

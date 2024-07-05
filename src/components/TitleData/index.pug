@@ -1,0 +1,9 @@
+prepend head
+	link(rel="stylesheet" href="../components/TitleData/style.sass")
+
+mixin titleData(titleText, titleDescription)
+	.titleData
+		.div
+			span #{titleText}
+		.div
+			span #{titleDescription}
