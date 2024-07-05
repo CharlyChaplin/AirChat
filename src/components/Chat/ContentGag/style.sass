@@ -12,5 +12,8 @@
 		font-size: rem(32)
 		color: rgba($blackColor, .25)
 		user-select: none
+		.logo
+			@include adaptiveValue("width", 200, 50)
+			@include adaptiveValue("height", 200, 50)
 		&--hidden
 			display: none
