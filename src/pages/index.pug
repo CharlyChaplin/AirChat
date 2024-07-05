@@ -4,6 +4,7 @@ include ../components/ExtraLink/index.pug
 include ../components/Input/index.pug
 include ../components/Button/index.pug
 include ../components/TitleData/index.pug
+include ../components/Logo/index.pug
 
 block variables 
 	-const title = "Вход";
@@ -14,6 +15,8 @@ prepend head
 block content 
 	main.page 
 		.page__form.form
+			.form__logo
+				+logo('../../static/assets/logo/logo.png', './index.pug', true, true, true)
 			.form__wrapper
 				form.form__content(id="signin" method="post")
 					.form__header
