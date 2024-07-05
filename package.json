@@ -5,7 +5,7 @@
 	"main": "index.js",
 	"scripts": {
 		"clear": "rm -R -f ./dist ./.parcel-cache",
-		"dev": "parcel ./src/pages/index.pug",
+		"dev": "npm run clear && parcel ./src/pages/index.pug",
 		"build": "parcel build ./index.pug",
 		"start": "node --env-file=.env server.js"
 	},

@@ -3,7 +3,10 @@ mixin inputType(type, id, placeholder="", descText="", errText="", forgotFactor=
 	fieldset.input
 		label.input__label(for=id)
 			.input__inputDesc #{descText}
-			input.input__textdata(type=type id=id placeholder=placeholder name=id)
+			if type === "tel"
+				input.input__textdata(type=type id=id data-phoneclear="true" data-phonepattern="+7(___) ___-__-__" placeholder="+7(123) 456-78-90" name=id)
+			else
+				input.input__textdata(type=type id=id placeholder=placeholder name=id)
 			.input__footer
 				span.input__errDesc #{errText}
 				if type === 'password' && forgotFactor

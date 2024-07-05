@@ -11,7 +11,7 @@ prepend head
 	link(rel="stylesheet", href="../components/ExtraLink/style.sass")
 	link(rel="stylesheet", href="../components/Input/style.sass")
 	link(rel="stylesheet", href="../components/Button/style.sass")
-	link(rel="stylesheet", href="../styles/signin.sass")
+	link(rel="stylesheet", href="../styles/index.sass")
 
 block content 
 	main.page 
@@ -22,7 +22,7 @@ block content
 						.form__caption
 							+titleData("Привет!", "Рады видеть тебя здесь!")
 					.form__body 
-						+inputType("text", "login", "Введите ваш e-mail...", "Электронная почта:")
+						+inputType("text", "email", "Введите ваш e-mail...", "Электронная почта:")
 						+inputType("password", "password", "Введите ваш пароль...", "Пароль:")
 					.form__footer
 						.form__button

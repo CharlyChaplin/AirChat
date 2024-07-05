@@ -11,13 +11,13 @@ prepend head
 	link(rel="stylesheet", href="../components/ExtraLink/style.sass")
 	link(rel="stylesheet", href="../components/Input/style.sass")
 	link(rel="stylesheet", href="../components/Button/style.sass")
-	link(rel="stylesheet", href="../styles/signup.sass")
+	link(rel="stylesheet", href="../styles/index.sass")
 
 block content 
 	main.page 
 		.page__form.form
 			.form__wrapper 
-				form.form__content
+				form.form__content(data-typeform="signup")
 					.form__header
 						.form__caption
 							+titleData("Давай к нам!", "Будем рады видеть тебя здесь!")
@@ -26,7 +26,7 @@ block content
 						+inputType("text", "nickname", "Ваш ник в чате...", "Никнейм в чате:")
 						+inputType("text", "first_name", "Ваше настоящее имя...", "Имя:")
 						+inputType("text", "second_name", "Ваша настоящая фамилия...", "Фамилия:")
-						+inputType("text", "phone", "Номер вашего телефона...", "Телефон:")
+						+inputType("tel", "phone", "Номер вашего телефона...", "Телефон:")
 						+inputType("password", "password", "Введите ваш пароль...", "Пароль:", "", false)
 						+inputType("password", "renewpassword", "Введите ваш пароль ещё раз...", "Повторите ввод пароля:", "", false)
 					.form__footer
