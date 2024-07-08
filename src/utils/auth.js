@@ -7,12 +7,12 @@ form.addEventListener('submit', e => submitAction(e, form));
 
 // Если это форма регистрации И имеется поле для ввода телефона
 if (form.dataset.typeform === "signup" && phoneField) {
-	for (let evt of ['input', 'blur', 'focus']) {
-		phoneField.addEventListener(evt, phoneInputWatch);
+	if (phoneField) {
+		for (let evt of ['input', 'blur', 'focus']) {
+			phoneField.addEventListener(evt, phoneInputWatch);
+		}
 	}
-}
 
-if (form.dataset.typeform === "signup") {
 	const renewPassElem = document.getElementById('renewpassword');
 	renewPassElem.addEventListener('input', () => renewInputCheck(form));
 }
@@ -28,8 +28,10 @@ function submitAction(e, frm) {
 		for (let [key, value] of formData.entries()) {
 			if (key !== 'renewpassword') outObj[key] = value;
 		}
-		console.log(outObj);
+		console.log("Данные отправлены:", outObj);
 		return outObj;
+	} else {
+		console.log("Ошибка в данных, поэтому они не отправлены.");
 	}
 
 }
