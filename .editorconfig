@@ -1,0 +1,6 @@
+[*]
+indent_size = 3
+indent_style = tab
+
+[*.json]
+indent_size = 3
